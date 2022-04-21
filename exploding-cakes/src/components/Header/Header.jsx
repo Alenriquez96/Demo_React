@@ -9,6 +9,3 @@ export class header extends Component {
 }
 
 export default header
-
-{/* <img src={logo} className="App-logo" alt="logo" />
-<h1>Futura web - Exploding cakes</h1> */}
