@@ -1,0 +1,19 @@
+[
+    {
+        "name": "Limón",
+        "price": 5,
+        "img": "https://badun.nestle.es/imgserver/v1/80/1290x742/f89aff51a738-tarta-de-limon.jpg"
+    },
+    {
+        "name": "Queso",
+        "price": 3,
+        "company": "Sargento de queso SA",
+        "img":"https://i.ytimg.com/vi/4iBmo59k8Vc/maxresdefault.jpg"
+    },
+    {
+        "name": "Fresa",
+        "price": 4,
+        "company": "Esequesite SA",
+        "img":"https://i.ytimg.com/vi/3wmLon0_7yI/maxresdefault.jpg"
+    }
+]
