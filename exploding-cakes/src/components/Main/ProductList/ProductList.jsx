@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import ProductItem from './ProductItem'
 import dataCakes from "./cakes.json"
-
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
 
 export class ProductList extends Component {
   constructor(props) {
@@ -56,19 +57,28 @@ export class ProductList extends Component {
       <div>
 
           <h1>Añadir nueva tarta</h1>
-          <form onSubmit={this.addCake}>
-            <label htmlFor="cake">Nombre tarta:</label><br/>
+          <form onSubmit={this.addCake} className="form">
+            {/* <label htmlFor="cake">Nombre tarta:</label><br/>
             <input type="text" id="cake" name="cake"/><br/>
             <label htmlFor="price">Precio:</label><br/>
             <input type="text" id="price" name="price"/><br/>
             <label htmlFor="img">URL imagen:</label><br/>
-            <input type="url" id="img" name="img"/><br/>
-            <input type="submit" value="Enviar"/>
+            <input type="url" id="img" name="img"/><br/> */}
+            <TextField id="outlined-basic" label="Nombre tarta" variant="filled" name='cake'/>
+            <TextField id="outlined-basic" label="Precio" variant="filled" name='price'/>
+            <TextField id="outlined-basic" label="URL imagen" variant="filled" name='img'/>
+            <Button variant="contained" type="submit" className="Button" sx={{margin:1}}>Guardar</Button>
           </form>
-          {this.paintCakes()}
-          <button onClick={this.addCake}>Clicka y añade tarta</button>
+          <div className='cake-list'>
+            {this.paintCakes()}
+          </div>
+          <div className='buttons'>
+            <Button variant="contained" type="submit" onClick={this.removeAllCakes} className="Button" sx={{margin:1}}>Borrar tartas</Button>
+            <Button variant="contained" type="submit" onClick={this.resetCakes} className="Button" sx={{margin:1}}>Recargar tartas</Button>
+          </div>
+          {/* <button onClick={this.addCake}>Clicka y añade tarta</button>
           <button onClick={this.removeAllCakes}>Borrar tartas</button>
-          <button onClick={this.resetCakes}>Recargar tartas</button>
+          <button onClick={this.resetCakes}>Recargar tartas</button> */}
 
           {
           name&&price?
