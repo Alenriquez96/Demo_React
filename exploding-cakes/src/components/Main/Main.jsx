@@ -15,8 +15,7 @@ export class main extends Component {
             <Route element={<Chefs/>} path="/chefs" />
             <Route element={<Contact/>} path="/contact"/>
           </Routes>
-        </main>
-      
+      </main>  
     )
   }
 }
