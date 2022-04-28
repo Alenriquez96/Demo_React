@@ -9,7 +9,7 @@ class Contact extends Component {
     this.state = {
        user:""
     }
-  }
+  }   
 
   login = (event) => {
     event.preventDefault();
