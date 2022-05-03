@@ -17,7 +17,7 @@ class Contact extends Component {
     const user = event.target.user.value
     alert(user)
     this.setState({user});
-    const loginUser = this.context.login//Leer la función login
+    const loginUser =   this.context.login//Leer la función login
     loginUser(user)
   }
   render() {

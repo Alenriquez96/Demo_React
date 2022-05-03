@@ -11,6 +11,7 @@ class Nav extends Component {
       <Link to="/contact" className="nav__element">Contact</Link>
       <Link to="/delivery" className="nav__element">Delivery</Link>
       <Link to="/topics" className="nav__element">Topics</Link>
+      <Link to="/tasters" className="nav__element">Tasters</Link>
     </nav>
     )
   }

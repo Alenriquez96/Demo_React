@@ -36,7 +36,7 @@ export class ProductList extends Component {
 
   paintCakes = () => this.state.cakes.map((cake,i)=> <ProductItem data={cake} key={i} remove={()=>this.removeCake(i)}/>)
   
-
+  
   removeAllCakes=()=>{
     this.setState({cakes:[]})
   }
