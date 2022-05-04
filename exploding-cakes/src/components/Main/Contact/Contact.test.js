@@ -1,10 +1,10 @@
 import React from "react";
-import { shallow } from "enzyme";
 import Contact from "./Contact";
+import { render, screen } from '@testing-library/react';
 
 describe("Contact", () => {
   test("matches snapshot", () => {
-    const wrapper = shallow(<Contact />);
-    expect(wrapper).toMatchSnapshot();
+    render(<Contact />);
+    expect(screen).toMatchSnapshot();
   });
 });

@@ -1,10 +1,10 @@
 import React from "react";
-import { shallow } from "enzyme";
 import PokeList from "./PokeList";
+import { render, screen } from '@testing-library/react';
 
 describe("PokeList", () => {
   test("matches snapshot", () => {
-    const wrapper = shallow(<PokeList />);
-    expect(wrapper).toMatchSnapshot();
+    render(<PokeList />);
+    expect(screen).toMatchSnapshot();
   });
 });
