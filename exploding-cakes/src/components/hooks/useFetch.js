@@ -1,6 +1,7 @@
 import axios from "axios";
 import {useState, useEffect} from "react";
 
+
 // useFetch será una función que reciba como parámetro un string con una url
 const useFetch = (url) => {
     // Crearemos dos estados: loading(true) y result([]), que devolveremos en un objeto
