@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import {userContext} from "../../../context/userContext"
+import {userContext} from "../../../context/userContext";
+import axios from "axios";
 
 class Contact extends Component {
   static contextType = userContext;
@@ -18,7 +19,13 @@ class Contact extends Component {
     alert(user)
     this.setState({user});
     const loginUser =   this.context.login//Leer la función login
-    loginUser(user)
+    loginUser(user);
+
+    const res = await axios.post('https://jsonplaceholder.typicode.com/posts',{user});
+    const json = res.data;
+    console.log(json);
+    // Lo guardo en el estado
+    // this.setState(json); // {user,id}
   }
   render() {
     return (
